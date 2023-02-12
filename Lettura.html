@@ -1,0 +1,45 @@
+<HTML>
+    <head>
+        <title>Lettura File XML</title>
+    </head>
+
+    <body onload="loadDoc()">
+        <dl id="demo">
+        
+    </body>
+
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "dati.xml", true);
+            xhttp.send();
+        }
+        function myFunction(xml) {
+            var i;
+            var z;
+            var xmlDoc = xml.responseXML;
+            var table="";
+            var x = xmlDoc.getElementsByTagName("risorsa");
+            var y = xmlDoc.getElementsByTagName("energia");
+            for (i = 0; i < x.length; i++) {
+                table += "<dt>" +
+                x[i].getAttribute("tipo"); + 
+                "</dt>";
+
+                for (z = 0; z < y.length; z++){
+                    table += "<dt>" +
+                    y[z].getElementsByTagName("titolo")[0].childNodes[0].nodeValue +
+                    "</dt><dd>" +
+                    y[z].getElementsByTagName("descrizione")[0].childNodes[0].nodeValue +                
+                    "</dd></dl>";
+                }
+            }
+        document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+</HTML>

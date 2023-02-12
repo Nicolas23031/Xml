@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<energieRinnovabili>
+    <risorsa tipo="Acqua">
+        <energia>
+            <titolo>Idroelettrica</titolo>
+            <descrizione>cose</descrizione>
+        </energia>
+    </risorsa>
+
+    <risorsa tipo="Terra">
+        <energia>
+            <titolo>Geotermica</titolo>
+            <descrizione>cose</descrizione>
+        </energia>
+    </risorsa>
+
+    <risorsa tipo="Sole">
+        <energia>
+            <titolo>Solare</titolo>
+            <descrizione>cose</descrizione>
+        </energia>
+    </risorsa>
+
+    <risorsa tipo="Vento">
+        <energia>
+            <titolo>Eolica</titolo>
+            <descrizione>cose</descrizione>
+        </energia>
+    </risorsa>
+</energieRinnovabili>
